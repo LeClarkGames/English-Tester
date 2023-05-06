@@ -1,0 +1,30 @@
+from PyQt5.Qt import Qt
+from PyQt5.QtWidgets import (QApplication, QRadioButton, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QSpinBox, QGroupBox, QButtonGroup)
+
+app = QApplication([])
+
+group_box = QGroupBox("Answer Options")
+group_box2 = QGroupBox("Test Result")
+answer_btn = QPushButton("Answer")
+result = QLabel("Right / Wrong")
+qlb = QLabel("Audio Question")
+result_answ = QLabel("Answer")
+menu_btn = QPushButton("Menu")
+
+layout_group2 = QVBoxLayout()
+layout_group = QHBoxLayout()
+line_group = QVBoxLayout()
+line_group2 = QVBoxLayout()
+layout_app = QVBoxLayout()
+l1 = QHBoxLayout()
+l2 = QHBoxLayout()
+
+layout_app.addLayout(l1)
+layout_app.addStretch(1)
+layout_app.addWidget(qlb, alignment=Qt.AlignHCenter)
+layout_app.addStretch(1)
+layout_app.addWidget(group_box, stretch=8)
+layout_app.addWidget(group_box2, stretch=8)
+layout_app.addStretch(1)
+layout_app.addLayout(l2)
+layout_app.addStretch(1)
